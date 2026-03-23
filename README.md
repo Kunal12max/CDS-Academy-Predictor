@@ -3,7 +3,7 @@
 A full-stack web application that predicts a candidate's probability of clearing the cutoffs for Indian Armed Forces academies (IMA, INA, AFA, OTA) based on mock test scores and historical trends.
 
 ## 💡 Why I Built This
-As an aspirant preparing for the CDS exam, I realized that predicting selection isn't just about calculating total marks. Real-world cutoffs depend heavily on the exam's difficulty level and past trends. Instead of writing a basic `if-else` calculator, I integrated a Machine Learning model trained on historical CDS data to provide a realistic selection probability and actionable feedback on where a candidate needs to improve.
+While exploring real-world applications of Machine Learning, I noticed a gap in how competitive exam outcomes (like the Indian Armed Forces CDS exam) are predicted. Most existing tools use basic, static `if-else` calculators based only on total marks. I built this project to apply predictive modeling to historical exam data, creating a dynamic, data-driven tool that analyzes difficulty trends to give candidates realistic probabilities and actionable insights.
 
 ## ✨ Features
 * **Machine Learning Engine:** Uses a Random Forest Classifier to analyze marks against difficulty-adjusted historical data.
