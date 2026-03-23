@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDS AI Academy Predictor</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="default-bg">
+    <div class="overlay"></div>
+    
+    <div class="main-wrapper flex-center">
+        <div class="predict-card">
+            <h1 class="heading">CDS Academy Predictor</h1>
+            
+            <div class="form-section">
+                <form id="predictionForm">
+                    <div class="form-group">
+                        <label for="Maths">Elementary Maths (0-100)</label>
+                        <input type="number" id="Maths" name="Maths" min="0" max="100" required placeholder="Put 0 if applying only for OTA">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="English">English (0-100)</label>
+                        <input type="number" name="English" id="English" min="0" max="100" required placeholder="e.g., 65">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="gk">General Knowledge (0-100)</label>
+                        <input type="number" name="gk" id="gk" min="0" max="100" required placeholder="e.g., 45">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="difficulty">Expected Exam Difficulty</label>
+                        <select name="difficulty" id="difficulty" required>
+                            <option value="" disabled selected>Select expected scenario...</option>
+                            <option value="1">If Exam comes Easy</option>
+                            <option value="2">If Exam comes Moderate</option>
+                            <option value="3">If Exam comes Hard</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" id="submitBtn">Analyze Probability</button>
+                </form>
+            </div>
+
+            <div id="resultContainer" class="hidden">
+                <div class="separator"></div>
+                <h3>AI Selection Analysis</h3>
+                
+                <div id="loading" class="hidden text-center">
+                    <span class="loader"></span> Calculating...
+                </div>
+                
+                <div id="barsContainer"></div>
+                
+                <div id="infoCardsContainer" class="info-cards hidden">
+                    <div class="info-card">
+                        <h4>🎯 Expected Cutoff Context</h4>
+                        <p id="cutoffText"></p>
+                    </div>
+                    <div class="info-card">
+                        <h4>📊 Current Status</h4>
+                        <p id="statusText"></p>
+                    </div>
+                    <div class="info-card">
+                        <h4>📈 Area of Improvement</h4>
+                        <p id="improvementText"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
